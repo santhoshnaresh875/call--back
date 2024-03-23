@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown</title>
+    <style>
+        #countdown{
+            font-size: 100px;
+            width: 150px;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left:600px;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.412);
+        }
+        #sub{
+            font-size: 80px;
+            width: 00px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left:400px;
+            color: teal;
+
+        }
+        body{
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+    </style>
+</head>
+<body>
+        <p id="countdown"></p>
+        <p id="sub"></p>
+    <script>
+        var count=10
+        var countdown=function() {
+            if (count>=0) {
+                document.getElementById('countdown').innerHTML=count;
+                count--;
+                setTimeout(countdown, 1000); 
+             }
+            if(count==-1){
+                document.getElementById('countdown').innerHTML='';
+                document.getElementById('sub').innerHTML='Happy Independence Day';
+                }  
+            }
+            countdown();
+    </script>
+</body>
+</html>
